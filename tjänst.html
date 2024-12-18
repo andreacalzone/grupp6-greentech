@@ -16,44 +16,45 @@
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
-
             <h1>GreenTech Solutions AB</h1>
-            <p>Innovation för en hållbar framtid</p>
+            <p>Tillsammans mot en hållbar framtid</p>
         </div>
     </header>
 
     <main class="container">
-        <h1>Tjänster</h1>
+        <section>
+            <h2>Tjänster</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Solenergisystem</h3>
+                    <img src="img/solarpanels.jpg" alt="Solpaneler">
+                    <img src="img/solar-batteries.jpg" alt="Solbatterier">
+                    <p>Batterier, solpaneler och energilagringslösningar för en hållbar framtid.</p>
+                </div>
 
-        <div class="infocontainer">
-            <h2>Solenergisystem</h2>
-            <img src="img/solarpanels.jpg" alt="Solpaneler">
-            <img src="img/solar-batteries.jpg" alt="Solbatterier">
-            <p>Batterier, solpaneler och energilagringslösningar för en hållbar framtid.</p>
-        </div>
+                <div class="card">
+                    <h3>Smart hem-teknologi</h3>
+                    <img src="img/smartlightbulb.jpg" alt="Smart ljuskälla">
+                    <img src="img/smartfridge.jpg" alt="Smart kylskåp">
+                    <p>Modern och energieffektiv hemelektronik som sparar resurser.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="infocontainer">
-            <h2>Smart hem-teknologi</h2>
-            <img src="img/smartlightbulb.jpg" alt="Smart ljuskälla">
-            <img src="img/smartfridge.jpg" alt="Smart kylskåp">
-            <p>Modern och energieffektiv hemelektronik som sparar resurser.</p>
-        </div>
-
-        <div class="consultcontainer">
+        <section>
             <h2>Boka konsultation</h2>
-            <form>
+            <form class="consult-form">
                 <label for="name">Ange ditt namn här</label>
-                <input type="text" id="name" placeholder="Ditt namn">
+                <input type="text" id="name" placeholder="Ditt namn" required>
                 <label for="time">När vill du ha din konsultation?</label>
-                <input type="text" id="time" placeholder="Ange tid">
+                <input type="text" id="time" placeholder="Ange tid" required>
                 <button type="submit" id="toastbutton">Boka</button>
             </form>
-
             <div class="toast">
                 <p class="toasttext">Din bokning har skickats!</p>
                 <button id="closetoastbutton">Stäng</button>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">
