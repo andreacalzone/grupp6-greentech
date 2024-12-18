@@ -1,57 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tjänster - GreenTech Solutions AB</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">startsida</a>
-        <a href="kontakt.html">kontakt</a>
-    </nav>
-    <div class="container">
-    <h1>
-        Tjänster
-    </h1>
-    <div class="infocontainer">
-    <h2>
-        Solenergisystem
-    </h2>
-    <img src="img/solarpanels.jpg" alt="solarpanels">
-    <img src="img/solar-batteries.jpg" alt="solar-batteries">
-    <p>
-        Bygg upp din Solenergisystem med paneler och batterier.
-    </p>
-    </div>
-    <div class="infocontainer">
-    <h2>
-        Smart hem-teknologi
-    </h2>
-    <img src="img/smartlightbulb.jpg" alt="smartlightbulb">
-    <img src="img/smartfridge.jpg" alt="smartfridge">
-    <p>
-        Sparsam hem elektronik hjälper dig att spara på elkostnaden.
-    </p>
-    </div>
-    <div class="consultcontainer">
-    <h2>
-        Boka konsultation
-    </h2>
-    <form class="inputformula">
-        <label>Ange din namn här</label>
-        <input type="text" id="name">
-        <label> När vill du ha din konsultation</label>
-        <input type="text"id="time">
-        <button type="submit" id="toastbutton">Boka</button>
-    </form>
-    <!--alert pop up-->
-    <div class="toast">
-        <p class="toasttext"></p>
-        <button id="closetoastbutton"></button>
-    </div>
-    </div>
-    </div>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="tjänst.html">Tjänster</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <h1>GreenTech Solutions AB</h1>
+            <p>Tillsammans mot en hållbar framtid</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Tjänster</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Solenergisystem</h3>
+                    <img src="img/solarpanels.jpg" alt="Solpaneler">
+                    <img src="img/solar-batteries.jpg" alt="Solbatterier">
+                    <p>Batterier, solpaneler och energilagringslösningar för en hållbar framtid.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Smart hem-teknologi</h3>
+                    <img src="img/smartlightbulb.jpg" alt="Smart ljuskälla">
+                    <img src="img/smartfridge.jpg" alt="Smart kylskåp">
+                    <p>Modern och energieffektiv hemelektronik som sparar resurser.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Boka konsultation</h2>
+            <form class="consult-form">
+                <label for="name">Ange ditt namn här</label>
+                <input type="text" id="name" placeholder="Ditt namn" required>
+                <label for="time">När vill du ha din konsultation?</label>
+                <input type="text" id="time" placeholder="Ange tid" required>
+                <button type="submit" id="toastbutton">Boka</button>
+            </form>
+            <div class="toast">
+                <p class="toasttext">Din bokning har skickats!</p>
+                <button id="closetoastbutton">Stäng</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 GreenTech Solutions AB. Alla rättigheter förbehållna.</p>
+    </footer>
+
     <script src="tjänstscript.js"></script>
 </body>
 </html>
