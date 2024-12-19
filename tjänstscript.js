@@ -27,4 +27,3 @@ function validTime(timeinput) {
         return false;
     }
 }
-//module.exports={validTime};
