@@ -1,11 +1,12 @@
-/* Globala variabler för färger och typsnitt */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-    --primary-color: #2E8B57; /* Havsgrön */
-    --secondary-color: #A2D9CE; /* Ljusare grön */
-    --background-color: #F0F8F5; /* Ljus miljöbakgrund */
-    --text-color: #333333; /* Mörk textfärg */
-    --accent-color: #FFD700; /* Guld för viktiga element */
-    --footer-bg: #2E4C39; /* Mörkare grön för fotern */
+    --primary-color: #2E8B57;
+    --secondary-color: #A2D9CE;
+    --background-color: #F0F8F5;
+    --text-color: #333333;
+    --accent-color: #FFD700;
+    --footer-bg: #2E4C39;
     --white: #FFFFFF;
 }
 
@@ -16,7 +17,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Poppins;
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -28,7 +29,6 @@ body {
     padding: 1.5rem;
 }
 
-/* Navigationsmeny */
 .nav {
     margin-top: 1rem;
 }
@@ -54,13 +54,24 @@ body {
     color: var(--accent-color);
 }
 
-/* Header */
 .header {
-    background-color: var(--primary-color);
+    background: linear-gradient(rgba(46, 139, 87, 0.2), rgba(46, 139, 87, 0.2)),
+        url('img/header-img.jpg');
+    background-size: cover;
+    background-position: center bottom;
     color: var(--white);
     text-align: center;
     padding: 2rem 1rem;
     position: relative;
+    height: 250px;
+}
+
+.header img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    height: 60px;
+    width: auto;
 }
 
 .header h1 {
@@ -72,19 +83,83 @@ body {
     font-size: 1.2rem;
 }
 
-.header img {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    height: 60px;
-    width: auto;
+#hero {
+    position: relative;
+    background: linear-gradient(to right, #FFFFFF, rgba(255, 255, 255, 0)), url('img/team-1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 60vh;
+    flex-direction: column;
+    padding: 2rem;
 }
 
-.header a {
-    text-decoration: none;
+#hero h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
 }
 
-/* Generella sektioner */
+#hero p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    max-width: 40%;
+}
+
+#services {
+    position: relative;
+    background: linear-gradient(to left, #FFFFFF, rgba(255, 255, 255, 0.39)), url('img/team-2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 60vh;
+    padding: 2rem; 
+}
+
+
+
+#services h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: right;
+    align-self: flex-end;
+    display: inline-block;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+#services ul {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    align-self: flex-end;
+}
+
+#services ul li {
+    margin-bottom: 0.5rem;
+}
+
+#services ul li::before {
+    content: "🌱";
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+
 section {
     margin-bottom: 2rem;
     background-color: var(--white);
@@ -96,11 +171,11 @@ section {
 section h2 {
     margin-bottom: 1rem;
     color: var(--primary-color);
-    border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 0.5rem;
 }
 
-section p, section ul {
+section p,
+section ul {
     font-size: 1rem;
     line-height: 1.8;
 }
@@ -116,7 +191,6 @@ section ul li::before {
     color: var(--primary-color);
 }
 
-/* Specifika stilar för tjänster-sidan */
 .infocontainer {
     background-color: var(--white);
     padding: 1.5rem;
@@ -226,7 +300,8 @@ button:hover {
 }
 
 .card {
-    flex: 1 1 calc(33.333% - 1rem); /* 3 kort per rad */
+    flex: 1 1 calc(33.333% - 1rem);
+    /* 3 kort per rad */
     background-color: var(--white);
     padding: 1.5rem;
     border: 1px solid var(--secondary-color);
@@ -265,7 +340,6 @@ button:hover {
     }
 
     .menu {
-        flex-direction: column;
         gap: 1rem;
     }
 
@@ -275,6 +349,18 @@ button:hover {
 
     .header p {
         font-size: 1rem;
+    }
+
+    #hero,
+    #services {
+        height: 40vh;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero p,
+    #services ul {
+        max-width: 100%;
     }
 }
 
